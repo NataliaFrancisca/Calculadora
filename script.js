@@ -1,27 +1,22 @@
-/*const div = document.querySelector(".change-color");
-const buttons =[...document.getElementsByTagName("button")];
-
-
-const colors = [
-	{color: 'pink', textColor: "black"},
-	{color: "green", textColor: "white"},
-	{color: "orange", textColor: "red"}
-]
+const div = document.querySelector(".calculator");
+const buttons = [...document.querySelectorAll(".content-change-color > button")];
 
 buttons.forEach((button) => {
 
 	button.addEventListener("click", () => {
-		const style = colors.find(item => item.color == button.className);
 
-		div.style.cssText = ` 
-			background: ${style.color};
-			color: ${style.textColor};
-		`
+		let teste = [...div.classList].filter(item => item == 'calculator');
+
+		[...div.classList] = teste;
+		
+		div.classList.toggle(button.innerHTML.toLowerCase())
+		
 	})
-})*/
+
+})
 
 
-const resultado = document.querySelector(".result");
+const screen = document.querySelector(".screen");
 const btnNumbers = [...document.getElementsByClassName("number")];
 const btnOperator = [...document.getElementsByClassName("operator")];
 
@@ -31,7 +26,7 @@ let operator = "";
 //mostrando os números que são clicados na tela.
 btnNumbers.forEach((button) => {
 	button.addEventListener("click", () => {
-		resultado.innerHTML += button.innerHTML;
+		screen.innerHTML += button.innerHTML;
 	})
 })
 
@@ -43,61 +38,53 @@ btnOperator.forEach((button) => {
 		const innerButton = button.innerHTML;
 
 		switch (innerButton){
-			case "+":
-			case "-":
-			case "*":
-			case "/":
-				operator = innerButton;
-				pushAndCleanResult()
-			break;
 
 			case "Reset":
-				resultado.innerHTML = "";
-			break;
+				screen.innerHTML = "";
+				break;
 
 			case "Del":
-				resultado.innerHTML = resultado.innerHTML.slice(0,-1);
-			break;
+				screen.innerHTML = screen.innerHTML.slice(0,-1);
+				break;
+
+			case "+": case "-": case "*": case "/":
+				operator = innerButton;
+				pushAndCleanResult();
+				break;
+
+			case "=":
+				pushAndCleanResult();
+				result(operator);
+				values.length = 0;
+				break;
 		}
 
-		if(innerButton == "="){
-			pushAndCleanResult();
-
-			result(operator);
-			values.length = 0;
-		}
 	})
 })
 
 function pushAndCleanResult(){
-	values.push(parseFloat(resultado.innerHTML));
-	resultado.innerHTML = "";
+	values.push(parseFloat(screen.innerHTML));
+	screen.innerHTML = "";
 }
 
 
 function result(operator){
 
-	const soma = (accumulates, currentValue) => accumulates + currentValue;
-	const sub = (accumulates, currentValue) => accumulates - currentValue;
-	const mult = (accumulates, currentValue) => accumulates * currentValue;
-	const div = (accumulates, currentValue) => accumulates / currentValue;
-
-	if(operator == "+"){
-		resultado.innerHTML = values.reduce(soma);
+	switch(operator){
+		case "+":
+			screen.innerHTML = values[0] + values[1];
+			break;
+		case "-":
+			screen.innerHTML = values[0] - values[1];
+			break;
+		case "*":
+			screen.innerHTML = values[0] * values[1];
+			break;
+		case "/":
+			screen.innerHTML = values[0] / values[1];
+			break;
 	}
-
-	if(operator == "-"){
-		resultado.innerHTML = values.reduce(sub);
-	}
-
-	if(operator == "*"){
-		resultado.innerHTML = values.reduce(mult);
-	}
-
-	if(operator == "/"){
-		resultado.innerHTML = values.reduce(div);
-	}
-
 }
+
 
 
