@@ -1,21 +1,21 @@
-const div = document.querySelector(".calculator");
-const buttons = [...document.querySelectorAll(".content-change-color > button")];
+/* TROCAR A COR DA CALCULADORA*/
+const inputsColor = [...document.querySelectorAll(".three-button > label")];
+inputsColor.forEach((input) => {
 
-buttons.forEach((button) => {
-
-	button.addEventListener("click", () => {
+	input.addEventListener("click", () => {
 
 		let teste = [...div.classList].filter(item => item == 'calculator');
 
 		[...div.classList] = teste;
 		
-		div.classList.toggle(button.innerHTML.toLowerCase())
+		div.classList.toggle(input.innerHTML.toLowerCase())
 		
 	})
 
 })
 
 
+/* CALCULADORA */
 const screen = document.querySelector(".screen");
 const btnNumbers = [...document.getElementsByClassName("number")];
 const btnOperator = [...document.getElementsByClassName("operator")];
