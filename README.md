@@ -5,10 +5,14 @@
 
 ### ➡️ Coisas que preciso criar ou melhorar.
 
-- [ ] Criar a opção de alterar a cor da calculadora.
-- [ ] Melhorar o design.
+- [X] Criar a opção de alterar a cor da calculadora.
+- [X] Aplicar a opção de alterar a cor em um botão toggle.
+- [X] Melhorar o design.
 - [ ] Tentar reduzir o código.
+- [ ] Deixar responsivo.
 
 ### ➡️ Desafio: 
 
-- [ ] Conseguir que várias operações sejam feitas ao mesmo tempo => (5 + 3 - 2)
+- [X] Conseguir que várias operações sejam feitas ao mesmo tempo => (5 + 3 - 2)
+
+### Com o `eval` é possível fazer os calculos em sequência, mas não é recomendado usar.
