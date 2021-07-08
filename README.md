@@ -16,3 +16,6 @@
 - [X] Conseguir que várias operações sejam feitas ao mesmo tempo => (5 + 3 - 2)
 
 ### Com o `eval` é possível fazer os calculos em sequência, mas não é recomendado usar.
+
+
+![image](../src/purple.jpg)
