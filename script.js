@@ -1,14 +1,17 @@
 /* TROCAR A COR DA CALCULADORA*/
+
+let calculator  = document.querySelector(".calculator");
+
 const inputsColor = [...document.querySelectorAll(".three-button > label")];
 inputsColor.forEach((input) => {
 
 	input.addEventListener("click", () => {
 
-		let teste = [...div.classList].filter(item => item == 'calculator');
+		let teste = [...calculator.classList].filter(item => item == 'calculator');
 
-		[...div.classList] = teste;
+		[...calculator.classList] = teste;
 		
-		div.classList.toggle(input.innerHTML.toLowerCase())
+		calculator.classList.toggle(input.innerHTML.toLowerCase())
 		
 	})
 
@@ -66,7 +69,6 @@ function pushAndCleanResult(){
 	values.push(parseFloat(screen.innerHTML));
 	screen.innerHTML = "";
 }
-
 
 function result(operator){
 
