@@ -1,8 +1,8 @@
 # :heavy_plus_sign: :heavy_minus_sign: :x: :heavy_division_sign: Calculadora
 
-### Calculadora simples, que pode fazer as quatro operações matemáticas. 
+### Calculadora simples, que pode fazer as quatro operações matemáticas. Também é possível trocar a cor do fundo.
 
-
+---
 ### ➡️ Coisas que preciso criar ou melhorar.
 
 - [X] Criar a opção de alterar a cor da calculadora.
@@ -13,9 +13,10 @@
 
 ### ➡️ Desafio: 
 
-- [X] Conseguir que várias operações sejam feitas ao mesmo tempo => (5 + 3 - 2)
+- [X] Conseguir que várias operações sejam feitas ao mesmo tempo (5 + 3 - 2)
+- Com o `eval` é possível fazer os calculos em sequência, mas não é recomendado usar.
 
-### Com o `eval` é possível fazer os calculos em sequência, mas não é recomendado usar.
+
+![imagem](src/purple.jpg?raw=true "Title")
 
 
-![image](../src/purple.jpg)
