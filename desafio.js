@@ -23,6 +23,14 @@ operators.forEach((operator) => {
 			case "/":
 				screenResult.innerHTML += innerButton;
 			break;
+
+			case "Reset":
+				screenResult.innerHTML = "";
+				break;
+
+			case "Del":
+				screenResult.innerHTML = screenResult.innerHTML.slice(0,-1);
+				break;
 		}
 
 		if(operator.innerHTML == "="){
