@@ -17,6 +17,10 @@
 - Com o `eval` é possível fazer os calculos em sequência, mas não é recomendado usar.
 
 
-![imagem](src/purple.jpg?raw=true "Title")
+![imagem](src/empty.png?raw=true "Title")
+![imagem](src/pink.png?raw=true "Title")
+![imagem](src/blue.png?raw=true "Title")
+
+
 
 
