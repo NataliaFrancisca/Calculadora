@@ -19,99 +19,6 @@ body{
 	align-items: center;
 }
 
-/* CALCULADORA */
-.calculator{
-	display: grid;
-	grid-template-columns: 1;
-
-	background: rgba(200,200,200,1);
-	max-width: 800px;
-
-	padding: 10px;
-	margin: 0 auto;
-
-	grid-gap: 10px;
-
-	border-radius: 8px;
-	border: solid black 0.1rem;
-}
-
-.calculator > div{
-	width: 400px;
-	display: flex;
-}
-
-.calculator.purple{
-	background-color: rgba(167, 189, 217, 1);
-}
-
-.calculator.blue{
-	background-color: rgba(184, 216, 227, 1);
-}
-
-.calculator.pink{
-	background-color: rgba(242, 216, 213, 1);
-}
-
-
-
-/* BLOCO DE TROCAR A COR */
-.content-change-color{
-	background: rgba(255,255,255,0.5);
-	height: 50px;
-
-	border-radius: 8px;
-
-	display: flex;
-	justify-content: flex-end;
-	padding-right: 10px;
-	align-items: center;
-}
-
-/* TELA DE RESULTADO */
-
-.content-screen{
-	background: rgba(0,0,0,0.8);
-	color: white;
-
-	border-radius: 8px;
-	height: 90px;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-
-	padding-right: 10px;
-}
-
-.screen{
-	font-size: 2.5rem;
-}
-
-/*CALCULADORA -> NÚMEROS E OPERADORES*/
-
-/*bloco dos números/operadores*/
-.calculator > div:last-child{
-	display: grid;
-	grid-template-columns: repeat(1,1fr);
-	height: 320px;
-}
-
-/*bloco das linhas da calculadora*/
-.calculator .line{
-	display: grid;
-	width: 100%;	
-	grid-template-columns: repeat(4,1fr);
-	padding: 5px;
-	grid-gap: 10px;
-	margin: 0 auto;
-}
-
-/*os últimos botões que são maiores*/
-.calculator .line:last-child{
-	grid-template-columns: repeat(2,1fr);
-	width: 100%;	
-}
-
 button{
 	margin: 0 auto;
 	width: 80%;
@@ -127,16 +34,96 @@ button:hover{
 	filter: brightness(1.1);
 }
 
+/* CALCULADORA */
+.calculator{
+	display: flex;
+	flex-direction: column;
+
+	background: rgba(200,200,200,1);
+	max-width: 800px;
+
+	padding: 10px;
+	margin: 0 auto;
+
+	gap: 10px;
+
+	border-radius: 8px;
+	border: solid black 0.1rem;
+}
+
+.calculator > div{
+	width: 400px;
+	display: flex;
+}
+
+/* BLOCO DE TROCAR A COR */
+.content-change-color{
+	background: rgba(255,255,255,0.5);
+	height: 50px;
+
+	border-radius: 8px;
+
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
+	align-items: center;
+}
+
+/* TELA DE RESULTADO */
+.content-screen{
+	background: rgba(0,0,0,0.8);
+	color: white;
+
+	border-radius: 8px;
+	height: 90px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	padding-right: 10px;
+}
+
+.content-screen h1{
+	font-size: 2.5rem;
+}
+
+/* NÚMEROS E OPERADORES */
+
+/*BLOCO DE NÚMEROS E SIMBOLOS*/
+.simbols-numbers{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 320px;
+}
+
+/*BLOCO DAS LINHAS DA CALCULADORA*/
+.simbols-numbers .line{
+	display: grid;
+	width: 100%;	
+	grid-template-columns: repeat(4,1fr);
+	padding: 5px;
+	grid-gap: 10px;
+	margin: 0 auto;
+}
+
 .simbols-numbers button{
 	border: solid rgba(0,0,0,0.5) 0.1rem;
 }
 
-.calculator .line:last-child > button{
+/*OS ÚLTIMOS BOTÕES QUE SÃO MAIORES*/
+.simbols-numbers .line:last-child{
+	grid-template-columns: repeat(2,1fr);
+	width: 100%;	
+}
+
+.simbols-numbers .line:last-child > button{
 	width: 90%;	
 }
 
+
 /* BOTÃO DE TROCAR COR*/
-.three-button{
+.switch-toggle{
 	width: 10rem;
 	height: 2.5rem;
 
@@ -165,6 +152,7 @@ button:hover{
 .switch-toggle input + label {
 	padding: 7px;
 	cursor: pointer;
+	font-weight: 900;
 }
 
 .switch-toggle input:checked + label {
@@ -176,10 +164,6 @@ button:hover{
   	border-radius: 30px;
   	box-shadow: 2px 2px 5px black;
   	transition: .3s cubic-bezier(0.895, 0.07, 0.685, 0.68);
-}
-
-.switch-toggle label{
-	font-weight: 900;
 }
 
 .switch-toggle input:checked + label:nth-child(2){
@@ -194,4 +178,15 @@ button:hover{
 	background-color: rgba(242, 216, 213,0.4);
 }
 
+/*CORES DO BOTÃO TOGGLE*/
+.calculator.purple{
+	background-color: rgba(167, 189, 217, 1);
+}
 
+.calculator.blue{
+	background-color: rgba(184, 216, 227, 1);
+}
+
+.calculator.pink{
+	background-color: rgba(242, 216, 213, 1);
+}
