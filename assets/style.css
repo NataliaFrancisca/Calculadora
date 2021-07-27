@@ -195,8 +195,9 @@ button:hover{
 
 	.calculator{
 		width: auto;
-		height: 80vh;
 		display: block;
+		justify-content: center;
+
 	}
 
 	.calculator div{
@@ -210,5 +211,6 @@ button:hover{
 
 	.content-change-color{
 		height: 60px;
+
 	}
 }
