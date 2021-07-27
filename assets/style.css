@@ -190,3 +190,25 @@ button:hover{
 .calculator.pink{
 	background-color: rgba(242, 216, 213, 1);
 }
+
+@media(max-width: 450px){
+
+	.calculator{
+		width: auto;
+		height: 80vh;
+		display: block;
+	}
+
+	.calculator div{
+		width: 280px;
+		margin-bottom: .5rem;
+	}
+
+	button{
+		width: 90%;
+	}
+
+	.content-change-color{
+		height: 60px;
+	}
+}

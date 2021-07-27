@@ -1,22 +1,18 @@
 /* TROCAR A COR DA CALCULADORA*/
 
 let calculator  = document.querySelector(".calculator");
+const inputsColor = [...document.querySelectorAll(".content-change-color label")];
 
-const inputsColor = [...document.querySelectorAll(".three-button > label")];
 inputsColor.forEach((input) => {
-
 	input.addEventListener("click", () => {
 
 		let teste = [...calculator.classList].filter(item => item == 'calculator');
 
 		[...calculator.classList] = teste;
-		
 		calculator.classList.toggle(input.innerHTML.toLowerCase())
 		
 	})
-
 })
-
 
 /* CALCULADORA */
 const screen = document.querySelector(".screen");

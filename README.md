@@ -18,3 +18,5 @@
 
 
 ### ➡️ Link do projeto: 
+
+:link: https://calculadora-nf.netlify.app/
